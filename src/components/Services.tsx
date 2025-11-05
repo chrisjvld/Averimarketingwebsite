@@ -2,46 +2,44 @@ import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 export function Services() {
   return (
-    <section className="px-6 py-24 max-w-7xl mx-auto border-t border-gray-200">
-      <div className="grid md:grid-cols-2 gap-16 items-start">
-        <div className="space-y-8">
-          <h2 className="text-5xl">
-            Our Strategy
-          </h2>
-          
-          <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
-            <p>
-              Most agencies waste time chasing cold prospects. We don't. Our approach is built on 
-              real-time signal intelligence - tracking buying patterns, hiring trends, and market 
-              shifts to find companies that are actually ready to invest in marketing.
-            </p>
+    <section className="px-6 py-24 bg-gradient-to-br from-gray-50 to-gray-100">
+      <div className="max-w-6xl mx-auto">
+        <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div className="grid md:grid-cols-2">
+            <div className="p-12 md:p-16 space-y-6">
+              <h2 className="text-3xl">
+                Our Strategy
+              </h2>
+              
+              <div className="space-y-4 text-gray-800 text-sm leading-relaxed">
+                <p>
+                  Most agencies waste time chasing cold prospects. We don't. Our approach is built on 
+                  real-time signal intelligence - tracking buying patterns, hiring trends, and market 
+                  shifts to find companies that are actually ready to invest in marketing.
+                </p>
+                
+                <p>
+                  We use a proprietary stack that tracks lead signals across data sources. That 
+                  means verified contacts, direct decision-makers, and enriched firmographic data that 
+                  others can't reach.
+                </p>
+                
+                <p>
+                  Every outreach we run is timed, targeted, and personalized. No spray-and-pray. No 
+                  outdated lists. Just qualified conversations with agencies and businesses that are 
+                  ready to grow.
+                </p>
+              </div>
+            </div>
             
-            <p>
-              We use a proprietary stack that tracks lead signals across data sources. That 
-              means verified contacts, direct decision-makers, and enriched firmographic data that 
-              others can't reach.
-            </p>
-            
-            <p>
-              Every outreach we run is timed, targeted, and personalized. No spray-and-pray. No 
-              outdated lists. Just qualified conversations with agencies and businesses that are 
-              ready to grow.
-            </p>
-            
-            <p>
-              We focus on scalable systems that drive consistent volume while maintaining quality. 
-              Our process is designed to build predictable client flow - a long-term foundation for 
-              sustainable growth.
-            </p>
+            <div className="relative h-[400px] md:h-auto">
+              <ImageWithFallback
+                src="https://images.unsplash.com/photo-1596443019365-eb263a588404?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsJTIwbGFwdG9wJTIwd29ya3NwYWNlfGVufDF8fHx8MTc2MjI2ODE5OXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                alt="Minimal workspace"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
-        </div>
-        
-        <div className="md:pt-0 pt-8">
-          <ImageWithFallback
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=1000&fit=crop"
-            alt="Modern architecture"
-            className="w-full h-[600px] object-cover rounded-sm"
-          />
         </div>
       </div>
     </section>

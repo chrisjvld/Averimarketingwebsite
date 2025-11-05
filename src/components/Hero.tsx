@@ -1,6 +1,10 @@
 import { Calendar } from "lucide-react";
 
-export function Hero() {
+interface HeroProps {
+  onBookCall: () => void;
+}
+
+export function Hero({ onBookCall }: HeroProps) {
   return (
     <section className="px-6 py-20 md:py-32 bg-gradient-to-br from-[#0D0D0D] via-[#1a1a1a] to-[#0D0D0D] -mt-[72px] pt-32 md:pt-40">
       <div className="max-w-7xl mx-auto">
@@ -14,6 +18,7 @@ export function Hero() {
             </p>
             <div className="pt-4 space-y-3">
               <button 
+                onClick={onBookCall}
                 className="inline-flex items-center gap-2 bg-[#2A7FFF] hover:bg-[#1E6EE6] text-white px-7 py-4 rounded-lg transition-all duration-200 hover:scale-[1.02] active:scale-[0.99]"
                 style={{ 
                   fontFamily: 'Inter', 

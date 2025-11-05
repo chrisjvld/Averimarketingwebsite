@@ -1,9 +1,17 @@
+import { useState } from "react";
 import { Hero } from "./components/Hero";
 import { Services } from "./components/Services";
 import { About } from "./components/About";
 import { CTA } from "./components/CTA";
+import { BookingPage } from "./components/BookingPage";
 
 export default function App() {
+  const [currentPage, setCurrentPage] = useState<"home" | "booking">("home");
+
+  if (currentPage === "booking") {
+    return <BookingPage onBack={() => setCurrentPage("home")} />;
+  }
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -15,16 +23,27 @@ export default function App() {
 
       {/* Main Content */}
       <main>
-        <Hero />
+        <Hero onBookCall={() => setCurrentPage("booking")} />
         <Services />
         <About />
-        <CTA />
+        <CTA onBookCall={() => setCurrentPage("booking")} />
       </main>
 
       {/* Footer */}
       <footer className="px-6 py-12 max-w-7xl mx-auto border-t border-gray-200">
-        <div className="text-center text-sm text-gray-500">
-          © 2025 Averi Marketing. All rights reserved.
+        <div className="flex flex-col items-center gap-4">
+          <div className="text-sm text-gray-600">
+            <span className="text-gray-500">Contact us:</span>{' '}
+            <a 
+              href="mailto:christoffer@averimarketing.com" 
+              className="text-[#2A7FFF] hover:underline"
+            >
+              christoffer@averimarketing.com
+            </a>
+          </div>
+          <div className="text-sm text-gray-500">
+            © 2025 Averi Marketing. All rights reserved.
+          </div>
         </div>
       </footer>
     </div>

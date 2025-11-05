@@ -1,6 +1,10 @@
 import { Calendar } from "lucide-react";
 
-export function CTA() {
+interface CTAProps {
+  onBookCall: () => void;
+}
+
+export function CTA({ onBookCall }: CTAProps) {
   return (
     <section className="px-6 py-24 bg-[#F8F8F8]">
       <div className="max-w-4xl mx-auto text-center space-y-6">
@@ -12,6 +16,7 @@ export function CTA() {
         </p>
         <div className="pt-4">
           <button 
+            onClick={onBookCall}
             className="inline-flex items-center gap-2 bg-[#2A7FFF] hover:bg-[#2778F0] text-white px-8 py-[18px] rounded-[10px] transition-all duration-200 hover:scale-[1.03] hover:shadow-lg"
             style={{ fontFamily: 'Inter', fontWeight: 600 }}
           >
