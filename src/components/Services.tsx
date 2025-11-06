@@ -34,8 +34,8 @@ export function Services() {
             
             <div className="relative h-[400px] md:h-auto">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1596443019365-eb263a588404?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsJTIwbGFwdG9wJTIwd29ya3NwYWNlfGVufDF8fHx8MTc2MjI2ODE5OXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="Minimal workspace"
+                src="/images/services.svg"
+                alt="Minimal workspace illustration"
                 className="w-full h-full object-cover"
               />
             </div>
