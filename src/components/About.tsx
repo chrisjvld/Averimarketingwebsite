@@ -1,4 +1,4 @@
-import founderImage from "figma:asset/4689d90526ecc9744c8606a164056746ffe63530.png";
+import founderImage from "@/assets/4689d90526ecc9744c8606a164056746ffe63530.png";
 
 export function About() {
   return (
