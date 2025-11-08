@@ -1,3 +1,5 @@
+import founderImage from "../assets/founder.png";
+
 export function About() {
   return (
     <section className="px-6 py-24 bg-[#F8F8F8]">
@@ -5,7 +7,7 @@ export function About() {
         <div className="grid md:grid-cols-2 gap-16 items-start">
           <div className="space-y-4">
             <img
-              src="/images/founder.png"
+              src={founderImage}
               alt="Christoffer, Founder of Averi Marketing"
               className="w-full h-auto object-cover"
             />
