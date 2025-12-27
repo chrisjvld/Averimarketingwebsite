@@ -7,6 +7,7 @@ import { Menu } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { BOOK_CALL_URL } from "@/lib/links";
+import { BrandLogo } from "@/components/brand-logo";
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
@@ -27,8 +28,8 @@ export function SiteNavbar() {
     <header className="fixed inset-x-0 top-0 z-50 border-b border-border bg-background/80 backdrop-blur">
       <Container>
         <div className="flex h-16 items-center justify-between gap-4">
-          <Link href="/" className="text-sm font-medium tracking-tight">
-            AveriMarketing
+          <Link href="/" className="rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+            <BrandLogo />
           </Link>
 
           <nav className="hidden items-center gap-6 md:flex" aria-label="Primary navigation">
@@ -65,7 +66,9 @@ export function SiteNavbar() {
               </SheetTrigger>
               <SheetContent side="right" className="w-[320px]">
                 <SheetHeader>
-                  <SheetTitle>AveriMarketing</SheetTitle>
+                  <SheetTitle>
+                    <BrandLogo />
+                  </SheetTitle>
                 </SheetHeader>
                 <div className="mt-6 grid gap-2">
                   {nav.map((item) => {

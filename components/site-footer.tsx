@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { BrandLogo } from "@/components/brand-logo";
 import { Container } from "@/components/container";
 
 const footerLinks = [
@@ -15,7 +16,9 @@ export function SiteFooter() {
       <Container>
         <div className="flex flex-col gap-6 py-10 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <p className="text-sm font-medium">AveriMarketing</p>
+            <div className="text-sm">
+              <BrandLogo />
+            </div>
             <p className="mt-2 text-sm text-muted-foreground">
               Outbound cold email systems for booked meetings.
             </p>
