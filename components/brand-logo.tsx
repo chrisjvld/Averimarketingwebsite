@@ -6,42 +6,52 @@ export function BrandLogo({
   className,
   markClassName,
   wordmarkClassName,
+  size = "md",
 }: {
   className?: string;
   markClassName?: string;
   wordmarkClassName?: string;
+  size?: "sm" | "md";
 }) {
+  const iconSize = size === "sm" ? 26 : 30;
   return (
     <span className={cn("inline-flex items-center gap-2", className)} aria-label="AveriMarketing">
       <svg
-        width="28"
-        height="28"
-        viewBox="0 0 28 28"
+        width={iconSize}
+        height={iconSize}
+        viewBox="0 0 32 32"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className={cn("shrink-0", markClassName)}
         aria-hidden="true"
         focusable="false"
       >
-        {/* Abstract sail mark (minimal, brand-like) */}
+        <defs>
+          <linearGradient id="averi-blue" x1="9" y1="6" x2="26" y2="24" gradientUnits="userSpaceOnUse">
+            <stop stopColor="#7CC6F0" />
+            <stop offset="0.55" stopColor="#1F7FB5" />
+            <stop offset="1" stopColor="#0B4F7A" />
+          </linearGradient>
+        </defs>
+
+        {/* Sail mark (approximation; swap to exact SVG/PNG when available) */}
         <path
-          d="M4 22.5c7.3-1.3 13.4-6.7 16.4-14.6.3-.7 1.4-.7 1.7 0 .8 2 .9 4.4.2 6.7-1.7 5.7-6.7 9.6-12.3 9.6H4Z"
+          d="M6.5 26.8c8.5-1.5 15.6-7.8 19.1-17.1.3-.8 1.5-.8 1.8 0 1 2.4 1.1 5.1.2 7.8-2 6.7-7.9 11.3-14.5 11.3H6.5Z"
           fill="#0B4F7A"
         />
         <path
-          d="M6.2 22.5c6.2-2.2 11-7.2 13.2-13.7.2-.7-.4-1.4-1.1-1.1C11.8 9.9 6.7 14.7 4.5 20.9c-.2.6.2 1.3.9 1.5.3.1.6.1.8.1Z"
-          fill="#2563EB"
+          d="M8.8 26.6c7.1-2.5 12.5-8.2 15-15.7.3-.9-.6-1.7-1.5-1.4-7.5 2.6-13.3 8.1-15.9 15.3-.3.8.3 1.6 1.2 1.8.4.1.8.1 1.2 0Z"
+          fill="url(#averi-blue)"
         />
         <path
-          d="M4 22.5h7.9c2.5 0 4.7-.6 6.7-1.7-2.2.1-4.4-.2-6.5-1.1-2.7-1.1-5.2-1.3-8.1-.1Z"
-          fill="#111827"
-          opacity="0.9"
+          d="M6.5 26.8h9.2c2.9 0 5.6-.7 7.9-2-2.6.1-5.2-.3-7.7-1.3-3.1-1.3-6.2-1.5-9.4-.1Z"
+          fill="#0F172A"
         />
       </svg>
 
       <span
         className={cn(
-          "text-sm font-semibold tracking-tight text-foreground",
+          "font-serif text-[15px] font-semibold tracking-tight text-foreground sm:text-[16px]",
           wordmarkClassName
         )}
       >

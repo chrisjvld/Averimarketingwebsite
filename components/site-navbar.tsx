@@ -29,7 +29,7 @@ export function SiteNavbar() {
       <Container>
         <div className="flex h-16 items-center justify-between gap-4">
           <Link href="/" className="rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
-            <BrandLogo />
+            <BrandLogo size="sm" />
           </Link>
 
           <nav className="hidden items-center gap-6 md:flex" aria-label="Primary navigation">
@@ -67,7 +67,7 @@ export function SiteNavbar() {
               <SheetContent side="right" className="w-[320px]">
                 <SheetHeader>
                   <SheetTitle>
-                    <BrandLogo />
+                    <BrandLogo size="sm" />
                   </SheetTitle>
                 </SheetHeader>
                 <div className="mt-6 grid gap-2">
