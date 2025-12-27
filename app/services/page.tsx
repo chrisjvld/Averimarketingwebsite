@@ -1,6 +1,6 @@
-import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
+import { BOOK_CALL_URL } from "@/lib/links";
 import { Container } from "@/components/container";
 import { Section } from "@/components/section";
 import { PageHeader } from "@/components/page-header";
@@ -35,12 +35,14 @@ export default function ServicesPage() {
                   <CardDescription>{s.description}</CardDescription>
                 </CardHeader>
                 <CardContent className="pt-0">
-                  <Link
-                    href="/contact"
+                  <a
+                    href={BOOK_CALL_URL}
+                    target="_blank"
+                    rel="noreferrer noopener"
                     className="inline-flex items-center gap-2 text-sm text-foreground underline-offset-4 hover:underline"
                   >
                     Book a call <ArrowRight className="h-4 w-4 opacity-70" />
-                  </Link>
+                  </a>
                 </CardContent>
               </Card>
             ))}

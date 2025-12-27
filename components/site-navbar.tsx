@@ -6,9 +6,11 @@ import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
 
 import { cn } from "@/lib/utils";
+import { BOOK_CALL_URL } from "@/lib/links";
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import { SmartLink } from "@/components/smart-link";
 
 const nav = [
   { href: "/", label: "Home" },
@@ -52,7 +54,7 @@ export function SiteNavbar() {
               asChild
               className="hidden bg-[var(--accent-color,#2563eb)] text-white hover:bg-[color-mix(in_oklab,var(--accent-color,#2563eb),black_10%)] md:inline-flex"
             >
-              <Link href="/contact">Book a call</Link>
+              <SmartLink href={BOOK_CALL_URL}>Book a call</SmartLink>
             </Button>
 
             <Sheet open={open} onOpenChange={setOpen}>
@@ -86,9 +88,9 @@ export function SiteNavbar() {
                     asChild
                     className="mt-2 bg-[var(--accent-color,#2563eb)] text-white hover:bg-[color-mix(in_oklab,var(--accent-color,#2563eb),black_10%)]"
                   >
-                    <Link href="/contact" onClick={() => setOpen(false)}>
+                    <SmartLink href={BOOK_CALL_URL} onClick={() => setOpen(false)}>
                       Book a call
-                    </Link>
+                    </SmartLink>
                   </Button>
                 </div>
               </SheetContent>

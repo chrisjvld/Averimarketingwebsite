@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
+import { BOOK_CALL_URL } from "@/lib/links";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Container } from "@/components/container";
@@ -25,9 +26,9 @@ export default function HomePage() {
               </p>
               <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
                 <Button asChild className="bg-[var(--accent-color,#2563eb)] text-white hover:bg-[color-mix(in_oklab,var(--accent-color,#2563eb),black_10%)]">
-                  <Link href="/contact">
+                  <a href={BOOK_CALL_URL} target="_blank" rel="noreferrer noopener">
                     Book a call <ArrowRight className="opacity-80" />
-                  </Link>
+                  </a>
                 </Button>
                 <Button asChild variant="outline">
                   <Link href="/how-it-works">See how it works</Link>
@@ -198,7 +199,7 @@ export default function HomePage() {
       <CtaBand
         title="If outbound isn’t something you want to manage, we can handle it."
         description="Book a short call. We’ll confirm fit and outline the next steps."
-        primary={{ href: "/contact", label: "Book a call" }}
+        primary={{ href: BOOK_CALL_URL, label: "Book a call" }}
         secondary={{ href: "/how-it-works", label: "See how it works" }}
       />
     </>

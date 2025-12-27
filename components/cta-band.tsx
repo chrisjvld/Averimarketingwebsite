@@ -1,7 +1,6 @@
-import Link from "next/link";
-
 import { Container } from "@/components/container";
 import { Section } from "@/components/section";
+import { SmartLink } from "@/components/smart-link";
 import { Button } from "@/components/ui/button";
 
 export function CtaBand({
@@ -34,11 +33,11 @@ export function CtaBand({
                   asChild
                   className="bg-[var(--accent-color,#2563eb)] text-white hover:bg-[color-mix(in_oklab,var(--accent-color,#2563eb),black_10%)]"
                 >
-                  <Link href={primary.href}>{primary.label}</Link>
+                  <SmartLink href={primary.href}>{primary.label}</SmartLink>
                 </Button>
                 {secondary ? (
                   <Button asChild variant="outline">
-                    <Link href={secondary.href}>{secondary.label}</Link>
+                    <SmartLink href={secondary.href}>{secondary.label}</SmartLink>
                   </Button>
                 ) : null}
               </div>
