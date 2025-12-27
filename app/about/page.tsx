@@ -10,34 +10,32 @@ export default function AboutPage() {
         <Container>
           <PageHeader
             eyebrow="About"
-            title="Outbound done with discipline."
-            description="We build cold email systems with a deliverability-first approach and clear reporting."
+            title="Done-for-you outbound, built for consistency."
+            description="Deliverability-first cold email systems, managed end-to-end with calm reporting."
           />
 
           <div className="mt-10 grid gap-10 lg:grid-cols-12">
             <div className="lg:col-span-7">
-              <div className="space-y-4">
-                <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
-                  AveriMarketing helps B2B teams book more qualified sales calls using cold email.
-                </p>
-                <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
-                  We don’t rely on hype. We focus on fundamentals: deliverability, targeting, clear copy, and steady
-                  iteration based on replies and booked meetings.
-                </p>
-                <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
-                  We can’t guarantee results, but we can run a consistent process and communicate clearly about what’s
-                  working and what we’re changing.
-                </p>
-              </div>
+              <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
+                AveriMarketing helps B2B companies book more qualified sales calls using cold email.
+              </p>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
+                We run outbound as a done-for-you service. Clients don’t need to manage tools, inboxes, or campaigns.
+                Meetings can be booked directly into the client’s calendar.
+              </p>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
+                We focus on fundamentals—deliverability, targeting, messaging, follow-ups, and iteration—measured in
+                replies, positive replies, and meetings booked. We don’t guarantee outcomes.
+              </p>
             </div>
 
             <div className="lg:col-span-5">
               <div className="rounded-2xl border border-border bg-card p-6">
-                <p className="text-sm font-medium">How we work</p>
+                <p className="text-sm font-medium">Approach</p>
                 <div className="mt-4 grid gap-3">
                   <div className="rounded-lg border border-border bg-background px-4 py-3">
-                    <p className="text-xs text-muted-foreground">Clarity</p>
-                    <p className="mt-1 text-sm">Simple plans, documented changes.</p>
+                    <p className="text-xs text-muted-foreground">Done-for-you delivery</p>
+                    <p className="mt-1 text-sm">We handle setup, campaigns, and iteration.</p>
                   </div>
                   <div className="rounded-lg border border-border bg-background px-4 py-3">
                     <p className="text-xs text-muted-foreground">Deliverability</p>
@@ -59,11 +57,11 @@ export default function AboutPage() {
           <div className="grid gap-4 md:grid-cols-3">
             <Card>
               <CardHeader className="space-y-2">
-                <CardTitle>Process-first</CardTitle>
-                <CardDescription>Repeatable systems over shortcuts.</CardDescription>
+                <CardTitle>Hands-off</CardTitle>
+                <CardDescription>You don’t run outbound.</CardDescription>
               </CardHeader>
               <CardContent className="text-sm leading-relaxed text-muted-foreground">
-                Tight workflows, responsible sending, and clear ownership.
+                We manage inboxes, lists, campaigns, and follow-ups end-to-end.
               </CardContent>
             </Card>
             <Card>
@@ -72,16 +70,16 @@ export default function AboutPage() {
                 <CardDescription>Decisions tied to outcomes.</CardDescription>
               </CardHeader>
               <CardContent className="text-sm leading-relaxed text-muted-foreground">
-                We track deliverability, replies, positive replies, and meetings.
+                We track deliverability health, replies, positive replies, and meetings booked.
               </CardContent>
             </Card>
             <Card>
               <CardHeader className="space-y-2">
-                <CardTitle>Collaborative</CardTitle>
-                <CardDescription>Easy handoffs and feedback loops.</CardDescription>
+                <CardTitle>Clear reporting</CardTitle>
+                <CardDescription>Simple weekly updates.</CardDescription>
               </CardHeader>
               <CardContent className="text-sm leading-relaxed text-muted-foreground">
-                Short reviews, clear edits, and documented changes.
+                What changed, what we learned, and what’s next.
               </CardContent>
             </Card>
           </div>

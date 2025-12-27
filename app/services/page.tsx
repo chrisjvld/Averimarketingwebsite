@@ -23,8 +23,8 @@ export default function ServicesPage() {
         <Container>
           <PageHeader
             eyebrow="Services"
-            title="End-to-end outbound cold email."
-            description="We build and manage the full system—from deliverability to lists to copy to iteration."
+            title="Done-for-you cold email outbound."
+            description="We run the full system end-to-end. You don’t need to manage inboxes, tools, or campaigns."
           />
 
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -60,23 +60,23 @@ export default function ServicesPage() {
             <div className="md:col-span-8">
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value="item-1">
-                  <AccordionTrigger>What does “end-to-end” include?</AccordionTrigger>
+                  <AccordionTrigger>What does “done-for-you” include?</AccordionTrigger>
                   <AccordionContent>
-                    Deliverability setup and monitoring, lead sourcing and list building, campaign strategy, cold email
-                    copywriting, follow-ups, and ongoing testing/iteration.
+                    Inbox setup and deliverability health, lead sourcing and list building, campaign strategy and cold
+                    email copywriting, follow-up systems, and ongoing testing, optimization, and reporting.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-2">
-                  <AccordionTrigger>What outcomes do you optimize for?</AccordionTrigger>
+                  <AccordionTrigger>How involved do we need to be?</AccordionTrigger>
                   <AccordionContent>
-                    Replies, positive replies, and booked meetings—while keeping deliverability healthy.
+                    Minimal. We’ll do initial alignment, get the access we need, then run outbound. Your main job is to
+                    take the sales calls. Meetings can be booked directly into your calendar.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-3">
-                  <AccordionTrigger>How do you protect deliverability?</AccordionTrigger>
+                  <AccordionTrigger>What outcomes do you optimize for?</AccordionTrigger>
                   <AccordionContent>
-                    We start with inbox setup and warmup, ramp volume carefully, and monitor bounces, spam signals, and
-                    inbox health as part of ongoing management.
+                    Replies, positive replies, and meetings booked—while keeping deliverability healthy.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-4">

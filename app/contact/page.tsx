@@ -51,7 +51,7 @@ export default function ContactPage() {
         <PageHeader
           eyebrow="Contact"
           title="Book a call."
-          description="Tell us what you’re selling and who you’re targeting. We’ll follow up with next steps."
+          description="We’ll review your setup and reply within 24–48 hours."
         />
 
         <div className="mt-10 grid gap-6 lg:grid-cols-12 lg:items-start">
@@ -60,6 +60,10 @@ export default function ContactPage() {
               <CardTitle>Request a call</CardTitle>
             </CardHeader>
             <CardContent>
+              <p className="-mt-2 mb-5 text-sm leading-relaxed text-muted-foreground">
+                Share a few details. If it’s a fit, we’ll send a scheduling link and confirm calendar access for booking
+                meetings.
+              </p>
               {submitted ? (
                 <div className="rounded-xl border border-border bg-background p-6">
                   <p className="text-sm font-medium">Request received</p>
@@ -128,7 +132,7 @@ export default function ContactPage() {
                       id="message"
                       name="message"
                       rows={6}
-                      placeholder="What do you sell, who do you target, and what does a qualified meeting look like?"
+                      placeholder="What do you sell, who do you target, and what does a qualified meeting look like? If you have a calendar link, include it."
                       value={values.message}
                       onChange={(e) => setValues((v) => ({ ...v, message: e.target.value }))}
                       onBlur={() => setTouched((t) => ({ ...t, message: true }))}
@@ -180,8 +184,21 @@ export default function ContactPage() {
                   <p className="mt-1 text-sm text-foreground/80">hello@averimarketing.example</p>
                 </div>
                 <div className="rounded-xl border border-border bg-background p-4">
-                  <p className="text-xs text-muted-foreground">Booking link</p>
-                  <p className="mt-1 text-sm text-foreground/80">Add your scheduling link here.</p>
+                  <p className="text-xs text-muted-foreground">Good fit if you want</p>
+                  <ul className="mt-2 space-y-2 text-sm text-foreground/80">
+                    <li className="flex gap-2">
+                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-foreground/40" />
+                      <span>Booked meetings without running outbound yourself</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-foreground/40" />
+                      <span>A deliverability-first approach</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-foreground/40" />
+                      <span>Clear reporting and steady iteration</span>
+                    </li>
+                  </ul>
                 </div>
               </CardContent>
             </Card>

@@ -11,8 +11,8 @@ export default function HowItWorksPage() {
         <Container>
           <PageHeader
             eyebrow="How it works"
-            title="A calm, measurable outbound process."
-            description="We build a reliable cold email system and improve it based on replies and meetings—not guesses."
+            title="Done-for-you outbound, delivered in clear steps."
+            description="We handle the infrastructure, targeting, campaigns, follow-ups, and optimization. You take the sales calls."
           />
 
           <div className="mt-10 grid gap-6 lg:grid-cols-12 lg:items-start">
@@ -21,24 +21,24 @@ export default function HowItWorksPage() {
                 variant="detailed"
                 steps={[
                   {
-                    title: "Kickoff + alignment",
-                    description: "Confirm targeting, positioning, constraints, and how meetings will be handled.",
+                    title: "Alignment & access",
+                    description: "Quick kickoff to confirm targeting, offers, and calendar access for booking meetings.",
                   },
                   {
                     title: "Inbox setup + deliverability",
                     description: "Set up sending infrastructure, warm up responsibly, and establish health monitoring.",
                   },
                   {
-                    title: "Lead sourcing + list building",
-                    description: "Build a targeted list with clean data and practical segmentation.",
+                    title: "Campaign creation",
+                    description: "Build lists, write copy, and set up sequences and follow-ups.",
                   },
                   {
-                    title: "Campaigns + follow-ups",
-                    description: "Write copy, build sequences, launch, and manage responses.",
+                    title: "Launch & follow-ups",
+                    description: "Launch campaigns, manage replies, and keep deliverability healthy as volume ramps.",
                   },
                   {
-                    title: "Testing + iteration",
-                    description: "Run structured tests and improve based on reply quality and booked meetings.",
+                    title: "Optimization & booked meetings",
+                    description: "Test, iterate, and report—focused on replies, positive replies, and meetings booked.",
                   },
                 ]}
               />
@@ -46,27 +46,29 @@ export default function HowItWorksPage() {
             <div className="lg:col-span-4">
               <Card className="sticky top-20">
                 <CardHeader>
-                  <CardTitle>What you get</CardTitle>
+                  <CardTitle>Your involvement</CardTitle>
                 </CardHeader>
                 <CardContent className="text-sm leading-relaxed text-muted-foreground">
                   <ul className="space-y-2">
                     <li className="flex gap-2">
                       <span className="mt-2 h-1.5 w-1.5 rounded-full bg-foreground/40" />
-                      <span>Inbox setup and deliverability monitoring</span>
+                      <span>Initial alignment</span>
                     </li>
                     <li className="flex gap-2">
                       <span className="mt-2 h-1.5 w-1.5 rounded-full bg-foreground/40" />
-                      <span>Targeted lead lists and segmentation</span>
+                      <span>Calendar access</span>
                     </li>
                     <li className="flex gap-2">
                       <span className="mt-2 h-1.5 w-1.5 rounded-full bg-foreground/40" />
-                      <span>Cold email copy + follow-up sequences</span>
-                    </li>
-                    <li className="flex gap-2">
-                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-foreground/40" />
-                      <span>Weekly reporting on replies and meetings</span>
+                      <span>Sales calls only</span>
                     </li>
                   </ul>
+                  <div className="mt-4 rounded-xl border border-border bg-background p-4">
+                    <p className="text-xs text-muted-foreground">What we handle</p>
+                    <p className="mt-1 text-sm text-foreground/80">
+                      Inboxes, deliverability, lists, campaigns, follow-ups, optimization, and reporting.
+                    </p>
+                  </div>
                 </CardContent>
               </Card>
             </div>
