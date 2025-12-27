@@ -1,4 +1,11 @@
 node_modules/
 dist/
 build/
+.next/
+.vercel/
+out/
+.env
+.env.local
+.env.*.local
+.turbo/
 .DS_Store
