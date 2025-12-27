@@ -17,7 +17,7 @@ export function SiteFooter() {
           <div>
             <p className="text-sm font-medium">AveriMarketing</p>
             <p className="mt-2 text-sm text-muted-foreground">
-              Minimal, professional marketing support.
+              Outbound cold email systems for booked meetings.
             </p>
           </div>
 

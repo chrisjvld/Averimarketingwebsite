@@ -50,21 +50,22 @@ export default function ContactPage() {
       <Container>
         <PageHeader
           eyebrow="Contact"
-          title="Start a conversation."
-          description="Share a few details. We’ll reply with next steps."
+          title="Book a call."
+          description="Tell us what you’re selling and who you’re targeting. We’ll follow up with next steps."
         />
 
         <div className="mt-10 grid gap-6 lg:grid-cols-12 lg:items-start">
           <Card className="lg:col-span-7">
             <CardHeader>
-              <CardTitle>Send a message</CardTitle>
+              <CardTitle>Request a call</CardTitle>
             </CardHeader>
             <CardContent>
               {submitted ? (
                 <div className="rounded-xl border border-border bg-background p-6">
-                  <p className="text-sm font-medium">Message received</p>
+                  <p className="text-sm font-medium">Request received</p>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    Thanks—your note has been saved. You can close this page or send another message.
+                    Thanks—your request has been saved. We’ll reply with a scheduling link and a couple of quick
+                    questions.
                   </p>
                   <div className="mt-5">
                     <Button
@@ -76,7 +77,7 @@ export default function ContactPage() {
                         setTouched({});
                       }}
                     >
-                      Send another
+                      Send another request
                     </Button>
                   </div>
                 </div>
@@ -127,6 +128,7 @@ export default function ContactPage() {
                       id="message"
                       name="message"
                       rows={6}
+                      placeholder="What do you sell, who do you target, and what does a qualified meeting look like?"
                       value={values.message}
                       onChange={(e) => setValues((v) => ({ ...v, message: e.target.value }))}
                       onBlur={() => setTouched((t) => ({ ...t, message: true }))}
@@ -149,7 +151,7 @@ export default function ContactPage() {
                       disabled={isSubmitting}
                       className="bg-[var(--accent-color,#2563eb)] text-white hover:bg-[color-mix(in_oklab,var(--accent-color,#2563eb),black_10%)]"
                     >
-                      {isSubmitting ? "Sending…" : "Send"}
+                      {isSubmitting ? "Sending…" : "Book a call"}
                     </Button>
                   </div>
                 </form>
@@ -160,20 +162,26 @@ export default function ContactPage() {
           <div className="lg:col-span-5">
             <Card className="sticky top-20">
               <CardHeader>
-                <CardTitle>Contact details</CardTitle>
+                <CardTitle>What happens next</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4 text-sm text-muted-foreground">
+              <CardContent className="space-y-5 text-sm text-muted-foreground">
+                <div>
+                  <p className="text-xs text-muted-foreground">Call format</p>
+                  <p className="mt-1 text-sm text-foreground/80">15–20 minutes, remote</p>
+                </div>
+                <div>
+                  <p className="text-xs text-muted-foreground">We’ll cover</p>
+                  <p className="mt-1 text-sm text-foreground/80">
+                    Deliverability, targeting, offers, volume, and what “qualified” means for you.
+                  </p>
+                </div>
                 <div>
                   <p className="text-xs text-muted-foreground">Email</p>
                   <p className="mt-1 text-sm text-foreground/80">hello@averimarketing.example</p>
                 </div>
-                <div>
-                  <p className="text-xs text-muted-foreground">Phone</p>
-                  <p className="mt-1 text-sm text-foreground/80">(000) 000-0000</p>
-                </div>
-                <div>
-                  <p className="text-xs text-muted-foreground">Availability</p>
-                  <p className="mt-1 text-sm text-foreground/80">Mon–Fri</p>
+                <div className="rounded-xl border border-border bg-background p-4">
+                  <p className="text-xs text-muted-foreground">Booking link</p>
+                  <p className="mt-1 text-sm text-foreground/80">Add your scheduling link here.</p>
                 </div>
               </CardContent>
             </Card>

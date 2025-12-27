@@ -52,7 +52,7 @@ export function SiteNavbar() {
               asChild
               className="hidden bg-[var(--accent-color,#2563eb)] text-white hover:bg-[color-mix(in_oklab,var(--accent-color,#2563eb),black_10%)] md:inline-flex"
             >
-              <Link href="/contact">Contact</Link>
+              <Link href="/contact">Book a call</Link>
             </Button>
 
             <Sheet open={open} onOpenChange={setOpen}>
@@ -87,7 +87,7 @@ export function SiteNavbar() {
                     className="mt-2 bg-[var(--accent-color,#2563eb)] text-white hover:bg-[color-mix(in_oklab,var(--accent-color,#2563eb),black_10%)]"
                   >
                     <Link href="/contact" onClick={() => setOpen(false)}>
-                      Contact
+                      Book a call
                     </Link>
                   </Button>
                 </div>

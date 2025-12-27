@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   title: "AveriMarketing",
-  description: "AveriMarketing",
+  description: "We help B2B companies book more qualified sales calls using cold email.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

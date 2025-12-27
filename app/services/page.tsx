@@ -8,12 +8,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const services = [
-  { title: "Positioning", description: "Clear messaging, tight structure, and consistent language." },
-  { title: "Web & landing pages", description: "Minimal pages with strong hierarchy and clean UX." },
-  { title: "Content systems", description: "Templates and guidelines that keep output consistent." },
-  { title: "Campaign support", description: "Planning, execution, and delivery coordination." },
-  { title: "Analytics basics", description: "Simple tracking and readable reporting." },
-  { title: "Design refresh", description: "Subtle UI updates for a more premium feel." },
+  { title: "Inbox setup + deliverability", description: "Domains, inboxes, warmup, and ongoing health checks." },
+  { title: "Lead sourcing + list building", description: "Targeted prospect lists with clean, validated data." },
+  { title: "Campaign strategy", description: "Segmentation, offers, sequencing, and sending plan." },
+  { title: "Cold email copywriting", description: "Clear, direct copy built for replies and real conversations." },
+  { title: "Follow-up systems", description: "Multi-touch sequences that stay respectful and effective." },
+  { title: "Testing + iteration", description: "Continuous improvements based on reply and meeting data." },
 ];
 
 export default function ServicesPage() {
@@ -23,8 +23,8 @@ export default function ServicesPage() {
         <Container>
           <PageHeader
             eyebrow="Services"
-            title="Focused offerings, delivered with care."
-            description="A small set of services designed for clarity, speed, and consistent results."
+            title="End-to-end outbound cold email."
+            description="We build and manage the full system—from deliverability to lists to copy to iteration."
           />
 
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -39,7 +39,7 @@ export default function ServicesPage() {
                     href="/contact"
                     className="inline-flex items-center gap-2 text-sm text-foreground underline-offset-4 hover:underline"
                   >
-                    Learn more <ArrowRight className="h-4 w-4 opacity-70" />
+                    Book a call <ArrowRight className="h-4 w-4 opacity-70" />
                   </Link>
                 </CardContent>
               </Card>
@@ -54,26 +54,37 @@ export default function ServicesPage() {
             <div className="md:col-span-4">
               <h2 className="text-xl font-medium tracking-tight sm:text-2xl">FAQ</h2>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                A few quick answers. If you’re unsure, the contact form is the fastest path.
+                Straight answers to common questions.
               </p>
             </div>
             <div className="md:col-span-8">
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value="item-1">
-                  <AccordionTrigger>How do engagements start?</AccordionTrigger>
-                  <AccordionContent>We align on scope, timeline, and a simple weekly cadence.</AccordionContent>
+                  <AccordionTrigger>What does “end-to-end” include?</AccordionTrigger>
+                  <AccordionContent>
+                    Deliverability setup and monitoring, lead sourcing and list building, campaign strategy, cold email
+                    copywriting, follow-ups, and ongoing testing/iteration.
+                  </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-2">
-                  <AccordionTrigger>How do you handle feedback?</AccordionTrigger>
-                  <AccordionContent>Short review cycles with clear decisions and next steps.</AccordionContent>
+                  <AccordionTrigger>What outcomes do you optimize for?</AccordionTrigger>
+                  <AccordionContent>
+                    Replies, positive replies, and booked meetings—while keeping deliverability healthy.
+                  </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-3">
-                  <AccordionTrigger>What do deliverables look like?</AccordionTrigger>
-                  <AccordionContent>Clean docs, design files (when needed), and implementation-ready assets.</AccordionContent>
+                  <AccordionTrigger>How do you protect deliverability?</AccordionTrigger>
+                  <AccordionContent>
+                    We start with inbox setup and warmup, ramp volume carefully, and monitor bounces, spam signals, and
+                    inbox health as part of ongoing management.
+                  </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-4">
-                  <AccordionTrigger>Can you work with existing teams?</AccordionTrigger>
-                  <AccordionContent>Yes. We integrate with your tools and keep communication lightweight.</AccordionContent>
+                  <AccordionTrigger>Do you guarantee results?</AccordionTrigger>
+                  <AccordionContent>
+                    No. We can’t guarantee outcomes, but we run a disciplined process focused on measurable signals and
+                    continuous improvement.
+                  </AccordionContent>
                 </AccordionItem>
               </Accordion>
             </div>
