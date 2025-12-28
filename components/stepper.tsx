@@ -31,15 +31,15 @@ export function Stepper({
                 "md:before:content-[''] md:before:absolute md:before:-left-3 md:before:top-1/2 md:before:h-px md:before:w-3 md:before:bg-border",
               // vertical connectors (detailed)
               isDetailed &&
-                "md:pl-8 md:before:content-[''] md:before:absolute md:before:left-3 md:before:top-6 md:before:h-2 md:before:w-2 md:before:rounded-full md:before:bg-[var(--accent-color)]/70",
+                "md:pl-10 md:before:content-[''] md:before:absolute md:before:left-4 md:before:top-6 md:before:h-2 md:before:w-2 md:before:rounded-full md:before:bg-[var(--accent-color)]",
               isDetailed &&
                 idx !== steps.length - 1 &&
-                "md:after:content-[''] md:after:absolute md:after:left-3.5 md:after:top-10 md:after:bottom-6 md:after:w-px md:after:bg-border"
+                "md:after:content-[''] md:after:absolute md:after:left-[19px] md:after:top-10 md:after:bottom-0 md:after:w-px md:after:bg-border/50"
             )}
           >
             <div className="flex items-start gap-4">
-              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-border bg-background text-sm font-medium">
-                {idx + 1}
+              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-border bg-background text-xs font-medium text-muted-foreground">
+                {String(idx + 1).padStart(2, '0')}
               </div>
               <div className="min-w-0">
                 <p className="text-sm font-medium">{step.title}</p>

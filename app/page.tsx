@@ -1,208 +1,185 @@
-import { ArrowRight, CheckCircle2 } from "lucide-react";
-
-import { BOOK_CALL_URL } from "@/lib/links";
-import Link from "next/link";
+import { ArrowRight, CheckCircle2, XCircle } from "lucide-react";
 import { BookCallButton } from "@/components/book-call";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Container } from "@/components/container";
 import { CtaBand } from "@/components/cta-band";
 import { Section } from "@/components/section";
 import { Stepper } from "@/components/stepper";
+import { BOOK_CALL_URL } from "@/lib/links";
 
 export default function HomePage() {
   return (
     <>
-      <Section>
+      {/* HERO SECTION */}
+      <Section className="pt-24 pb-20 sm:pt-32 sm:pb-24">
         <Container>
-          <div className="grid gap-10 lg:grid-cols-12 lg:items-start">
-            <div className="lg:col-span-8">
-              <p className="text-sm font-medium text-muted-foreground">AveriMarketing</p>
-              <h1 className="mt-3 text-pretty text-4xl font-medium tracking-tight sm:text-5xl">
-                Book more qualified sales calls with cold email.
-              </h1>
-              <p className="mt-4 max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
-                We run cold email end-to-end and book meetings directly into your calendar, so you don’t have to manage
-                outbound yourself.
+          <div className="max-w-4xl">
+            <h1 className="text-4xl font-medium tracking-tight text-foreground sm:text-6xl sm:leading-[1.1]">
+              We book qualified sales meetings for AI implementation consultants.
+            </h1>
+            <p className="mt-6 text-xl text-muted-foreground sm:text-2xl">
+              Simple. Clear. Outcome-focused.
+            </p>
+            <p className="mt-4 max-w-2xl text-lg text-muted-foreground">
+              We run cold email campaigns end-to-end so you can spend less time prospecting and more time closing the right clients.
+            </p>
+            <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+              <BookCallButton className="h-12 px-8 text-base bg-[var(--accent-color)] text-white hover:bg-[var(--accent-color)]/90">
+                Book a call <ArrowRight className="ml-2 h-4 w-4" />
+              </BookCallButton>
+              <p className="text-sm text-muted-foreground">
+                No retainers. No long-term contracts. Just focused outbound.
               </p>
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
-                <BookCallButton className="bg-[var(--accent-color,#2563eb)] text-white hover:bg-[color-mix(in_oklab,var(--accent-color,#2563eb),black_10%)]">
-                  Book a call <ArrowRight className="opacity-80" />
-                </BookCallButton>
-                <Button asChild variant="outline">
-                  <Link href="/how-it-works">See how it works</Link>
-                </Button>
-              </div>
-            </div>
-
-            <div className="lg:col-span-4">
-              <div className="rounded-2xl border border-border bg-card p-6">
-                <p className="text-sm font-medium">Quick reassurance</p>
-                <div className="mt-4 space-y-3 text-sm text-muted-foreground">
-                  <div className="flex items-start gap-2">
-                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0" />
-                    <span>Fully done-for-you</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0" />
-                    <span>No tools or setup required</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0" />
-                    <span>Meetings booked into your calendar</span>
-                  </div>
-                </div>
-                <p className="mt-5 text-xs leading-relaxed text-muted-foreground">
-                  We focus on replies, positive replies, and meetings booked—without promising guaranteed outcomes.
-                </p>
-              </div>
             </div>
           </div>
         </Container>
       </Section>
 
+      {/* TRUST / POSITIONING STRIP */}
+      <div className="border-y border-border bg-card/50 py-4">
+        <Container>
+          <p className="text-center text-sm font-medium text-muted-foreground">
+            Built specifically for AI consultants and automation agencies.{" "}
+            <span className="opacity-60">Not for generalists. Not for mass-market offers.</span>
+          </p>
+        </Container>
+      </div>
+
+      {/* OUR PROCESS */}
       <Section divider>
         <Container>
-          <div className="grid gap-8 lg:grid-cols-12 lg:items-start">
-            <div className="lg:col-span-5">
-              <h2 className="text-2xl font-medium tracking-tight sm:text-3xl">What we do</h2>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                We run outbound for you. You don’t need to manage inboxes, tools, or campaigns.
-              </p>
-            </div>
-            <div className="lg:col-span-7">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Deliverables</CardTitle>
-                </CardHeader>
-                <CardContent className="pt-0 text-sm leading-relaxed text-muted-foreground">
-                  <ul className="space-y-2">
-                    <li className="flex gap-2">
-                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-foreground/40" />
-                      <span>Inbox setup &amp; deliverability</span>
-                    </li>
-                    <li className="flex gap-2">
-                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-foreground/40" />
-                      <span>Lead sourcing &amp; list building</span>
-                    </li>
-                    <li className="flex gap-2">
-                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-foreground/40" />
-                      <span>Campaign strategy &amp; cold email copywriting</span>
-                    </li>
-                    <li className="flex gap-2">
-                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-foreground/40" />
-                      <span>Follow-up systems</span>
-                    </li>
-                    <li className="flex gap-2">
-                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-foreground/40" />
-                      <span>Reporting &amp; iteration</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
+          <div className="mb-12 max-w-2xl">
+            <h2 className="text-3xl font-medium tracking-tight sm:text-4xl">Our process</h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              A simple, hands-off system designed for AI implementation consultants.
+            </p>
           </div>
+          <Stepper
+            variant="detailed"
+            steps={[
+              {
+                title: "Targeting & positioning",
+                description:
+                  "We define a narrow ideal customer profile and build a focused list of companies that are actually a fit for your services. No scraped junk. No generic outreach.",
+              },
+              {
+                title: "Outbound outreach",
+                description:
+                  "We write, send, and manage cold email campaigns on your behalf. Deliverability, follow-ups, and inbox management are handled by us. You don’t need to touch tools, domains, or inboxes.",
+              },
+              {
+                title: "Qualification & booking",
+                description:
+                  "Interested prospects are filtered and booked directly into your calendar. You only speak with companies that want to have the conversation. You show up prepared and close.",
+              },
+            ]}
+          />
         </Container>
       </Section>
 
+      {/* WHO THIS IS FOR / NOT FOR */}
       <Section divider>
         <Container>
-          <div className="flex items-end justify-between gap-6">
-            <div className="max-w-2xl">
-              <h2 className="text-2xl font-medium tracking-tight sm:text-3xl">How it works</h2>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                Three steps designed to keep your involvement low.
-              </p>
-            </div>
-            <Button asChild variant="link" className="hidden sm:inline-flex">
-              <Link href="/how-it-works">
-                See how it works <ArrowRight className="opacity-70" />
-              </Link>
-            </Button>
-          </div>
-          <div className="mt-8">
-            <Stepper
-              steps={[
-                { title: "Quick alignment", description: "Confirm targeting, calendar access, and what “qualified” means." },
-                { title: "We build and launch", description: "Deliverability, lists, copy, campaigns, and follow-ups." },
-                { title: "Meetings land on your calendar", description: "We optimize and report while you take sales calls." },
-              ]}
-            />
+          <h2 className="mb-12 text-3xl font-medium tracking-tight sm:text-4xl">Is this a fit?</h2>
+          <div className="grid gap-8 md:grid-cols-2">
+            <Card className="border-border/50 bg-card/50">
+              <CardContent className="p-8">
+                <p className="mb-6 font-medium text-foreground">This is for you if:</p>
+                <ul className="space-y-4 text-muted-foreground">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[var(--accent-color)]" />
+                    <span>You sell AI implementation or automation services</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[var(--accent-color)]" />
+                    <span>Your deals are high-value and relationship-driven</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[var(--accent-color)]" />
+                    <span>You want more qualified sales conversations without hiring SDRs</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border/50 bg-card/50 opacity-80">
+              <CardContent className="p-8">
+                <p className="mb-6 font-medium text-foreground">This is not for you if:</p>
+                <ul className="space-y-4 text-muted-foreground">
+                  <li className="flex items-start gap-3">
+                    <XCircle className="mt-0.5 h-5 w-5 shrink-0 text-muted-foreground" />
+                    <span>You sell low-ticket or consumer services</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <XCircle className="mt-0.5 h-5 w-5 shrink-0 text-muted-foreground" />
+                    <span>You want instant volume over quality</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <XCircle className="mt-0.5 h-5 w-5 shrink-0 text-muted-foreground" />
+                    <span>You’re looking for “growth hacks”</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
           </div>
         </Container>
       </Section>
 
+      {/* WHY AVERIMARKETING */}
       <Section divider>
         <Container>
-          <div className="grid gap-8 lg:grid-cols-12 lg:items-start">
-            <div className="lg:col-span-5">
-              <h2 className="text-2xl font-medium tracking-tight sm:text-3xl">What you get</h2>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                A simple, fully managed system—built to run in the background.
+          <div className="grid gap-12 lg:grid-cols-2">
+            <div>
+              <h2 className="text-3xl font-medium tracking-tight sm:text-4xl">Why AveriMarketing</h2>
+              <p className="mt-4 text-lg text-muted-foreground">
+                We’re not a general lead gen agency.
               </p>
             </div>
-            <div className="lg:col-span-7">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Checklist</CardTitle>
-                </CardHeader>
-                <CardContent className="pt-0 text-sm text-muted-foreground">
-                  <div className="grid gap-3 sm:grid-cols-2">
-                    {[
-                      "Fully managed outbound",
-                      "Ongoing optimization",
-                      "Clear reporting",
-                      "Booked sales conversations",
-                    ].map((t) => (
-                      <div key={t} className="flex items-start gap-2">
-                        <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0" />
-                        <span>{t}</span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+            <div className="space-y-6 text-lg text-muted-foreground">
+              <p>
+                We work exclusively with AI consultants and automation agencies. That means we understand:
+              </p>
+              <ul className="list-disc pl-5 space-y-2 text-foreground">
+                <li>longer sales cycles</li>
+                <li>technical buyers</li>
+                <li>the difference between interest and intent</li>
+              </ul>
+              <p>
+                Our focus is simple: <span className="text-foreground">relevant conversations that turn into real opportunities.</span>
+              </p>
             </div>
           </div>
         </Container>
       </Section>
 
+      {/* SOCIAL PROOF / EARLY STAGE */}
       <Section divider>
         <Container>
-          <div className="grid gap-8 lg:grid-cols-12 lg:items-start">
-            <div className="lg:col-span-5">
-              <h2 className="text-2xl font-medium tracking-tight sm:text-3xl">Metrics that matter</h2>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                No vanity dashboards. Just the signals tied to outbound performance.
+          <div className="rounded-2xl border border-border bg-card p-8 sm:p-12">
+            <h2 className="text-2xl font-medium tracking-tight sm:text-3xl">Early campaigns. Focused execution.</h2>
+            <div className="mt-6 space-y-4 max-w-3xl text-lg text-muted-foreground">
+              <p>
+                We’re currently working with a small number of AI-focused firms and running tightly controlled outbound campaigns.
               </p>
-            </div>
-            <div className="lg:col-span-7">
-              <div className="grid gap-3 sm:grid-cols-2">
-                {[
-                  { k: "Replies", v: "Reply rate and response quality" },
-                  { k: "Positive replies", v: "Interested responses and next steps" },
-                  { k: "Meetings booked", v: "Meetings scheduled into your calendar" },
-                  { k: "Deliverability health", v: "Inbox health, bounces, spam signals" },
-                ].map((item) => (
-                  <div key={item.k} className="rounded-xl border border-border bg-card p-4">
-                    <p className="text-sm font-medium">{item.k}</p>
-                    <p className="mt-1 text-sm text-muted-foreground">{item.v}</p>
-                  </div>
-                ))}
-              </div>
+              <p>
+                No inflated case studies. No borrowed logos.
+              </p>
+              <p className="font-medium text-foreground">
+                Just clean execution and continuous improvement.
+              </p>
             </div>
           </div>
         </Container>
       </Section>
 
+      {/* CTA SECTION */}
       <CtaBand
-        title="If outbound isn’t something you want to manage, we can handle it."
-        description="Book a short call. We’ll confirm fit and outline the next steps."
+        title="Let’s see if this makes sense."
+        description="If you’re an AI implementation consultant looking for more qualified sales conversations, we can walk you through how this would work for you."
         primary={{ href: BOOK_CALL_URL, label: "Book a call" }}
         primaryMode="book"
-        secondary={{ href: "/how-it-works", label: "See how it works" }}
+        secondaryDescription="Short call. No pressure. No obligation."
       />
     </>
   );
 }
-

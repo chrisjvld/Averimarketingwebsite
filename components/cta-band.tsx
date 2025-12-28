@@ -10,12 +10,14 @@ export function CtaBand({
   primary,
   secondary,
   primaryMode = "link",
+  secondaryDescription,
 }: {
   title: string;
   description?: string;
   primary: { href: string; label: string };
   secondary?: { href: string; label: string };
   primaryMode?: "link" | "book";
+  secondaryDescription?: string;
 }) {
   return (
     <Section divider>
@@ -30,16 +32,16 @@ export function CtaBand({
                 </p>
               ) : null}
             </div>
-            <div className="md:col-span-4 md:flex md:justify-end">
+            <div className="md:col-span-4 md:flex md:flex-col md:items-end md:justify-center">
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
                 {primaryMode === "book" ? (
-                  <BookCallButton className="bg-[var(--accent-color,#2563eb)] text-white hover:bg-[color-mix(in_oklab,var(--accent-color,#2563eb),black_10%)]">
+                  <BookCallButton className="bg-[var(--accent-color)] text-white hover:bg-[var(--accent-color)]/90">
                     {primary.label}
                   </BookCallButton>
                 ) : (
                   <Button
                     asChild
-                    className="bg-[var(--accent-color,#2563eb)] text-white hover:bg-[color-mix(in_oklab,var(--accent-color,#2563eb),black_10%)]"
+                    className="bg-[var(--accent-color)] text-white hover:bg-[var(--accent-color)]/90"
                   >
                     <SmartLink href={primary.href}>{primary.label}</SmartLink>
                   </Button>
@@ -50,6 +52,11 @@ export function CtaBand({
                   </Button>
                 ) : null}
               </div>
+              {secondaryDescription ? (
+                <p className="mt-3 text-xs text-muted-foreground text-center sm:text-right">
+                  {secondaryDescription}
+                </p>
+              ) : null}
             </div>
           </div>
         </div>

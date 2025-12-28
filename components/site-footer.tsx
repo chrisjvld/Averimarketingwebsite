@@ -20,7 +20,7 @@ export function SiteFooter() {
               <BrandLogo />
             </div>
             <p className="mt-2 text-sm text-muted-foreground">
-              Outbound cold email systems for booked meetings.
+              Outbound lead generation for AI implementation consultants
             </p>
           </div>
 

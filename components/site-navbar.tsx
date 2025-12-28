@@ -39,7 +39,7 @@ export function SiteNavbar() {
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    "text-sm text-muted-foreground transition-colors hover:text-foreground",
+                    "text-sm font-medium text-muted-foreground transition-colors hover:text-foreground",
                     active && "text-foreground"
                   )}
                 >
@@ -51,7 +51,7 @@ export function SiteNavbar() {
 
           <div className="flex items-center gap-2">
             <div className="hidden md:block">
-              <BookCallButton className="bg-[var(--accent-color,#2563eb)] text-white hover:bg-[color-mix(in_oklab,var(--accent-color,#2563eb),black_10%)]">
+              <BookCallButton className="bg-[var(--accent-color)] text-white hover:bg-[var(--accent-color)]/90 h-9 px-4 text-sm font-medium">
                 Book a call
               </BookCallButton>
             </div>
@@ -87,7 +87,7 @@ export function SiteNavbar() {
                   })}
                   <div className="mt-2">
                     <BookCallButton
-                      className="w-full bg-[var(--accent-color,#2563eb)] text-white hover:bg-[color-mix(in_oklab,var(--accent-color,#2563eb),black_10%)]"
+                      className="w-full bg-[var(--accent-color)] text-white hover:bg-[var(--accent-color)]/90"
                       // close the menu when the dialog opens
                       // eslint-disable-next-line react/jsx-no-bind
                       onClick={() => setOpen(false)}
