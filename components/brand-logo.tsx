@@ -45,7 +45,8 @@ export function BrandLogo({
         />
         <path
           d="M6.5 26.8h9.2c2.9 0 5.6-.7 7.9-2-2.6.1-5.2-.3-7.7-1.3-3.1-1.3-6.2-1.5-9.4-.1Z"
-          fill="#0F172A"
+          fill="currentColor"
+          className="text-foreground"
         />
       </svg>
 
