@@ -1,7 +1,8 @@
-import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 import { BOOK_CALL_URL } from "@/lib/links";
+import Link from "next/link";
+import { BookCallButton } from "@/components/book-call";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Container } from "@/components/container";
@@ -25,11 +26,9 @@ export default function HomePage() {
                 outbound yourself.
               </p>
               <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
-                <Button asChild className="bg-[var(--accent-color,#2563eb)] text-white hover:bg-[color-mix(in_oklab,var(--accent-color,#2563eb),black_10%)]">
-                  <a href={BOOK_CALL_URL} target="_blank" rel="noreferrer noopener">
-                    Book a call <ArrowRight className="opacity-80" />
-                  </a>
-                </Button>
+                <BookCallButton className="bg-[var(--accent-color,#2563eb)] text-white hover:bg-[color-mix(in_oklab,var(--accent-color,#2563eb),black_10%)]">
+                  Book a call <ArrowRight className="opacity-80" />
+                </BookCallButton>
                 <Button asChild variant="outline">
                   <Link href="/how-it-works">See how it works</Link>
                 </Button>
@@ -200,6 +199,7 @@ export default function HomePage() {
         title="If outbound isn’t something you want to manage, we can handle it."
         description="Book a short call. We’ll confirm fit and outline the next steps."
         primary={{ href: BOOK_CALL_URL, label: "Book a call" }}
+        primaryMode="book"
         secondary={{ href: "/how-it-works", label: "See how it works" }}
       />
     </>

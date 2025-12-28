@@ -6,12 +6,11 @@ import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
 
 import { cn } from "@/lib/utils";
-import { BOOK_CALL_URL } from "@/lib/links";
 import { BrandLogo } from "@/components/brand-logo";
+import { BookCallButton } from "@/components/book-call";
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-import { SmartLink } from "@/components/smart-link";
 
 const nav = [
   { href: "/", label: "Home" },
@@ -51,12 +50,11 @@ export function SiteNavbar() {
           </nav>
 
           <div className="flex items-center gap-2">
-            <Button
-              asChild
-              className="hidden bg-[var(--accent-color,#2563eb)] text-white hover:bg-[color-mix(in_oklab,var(--accent-color,#2563eb),black_10%)] md:inline-flex"
-            >
-              <SmartLink href={BOOK_CALL_URL}>Book a call</SmartLink>
-            </Button>
+            <div className="hidden md:block">
+              <BookCallButton className="bg-[var(--accent-color,#2563eb)] text-white hover:bg-[color-mix(in_oklab,var(--accent-color,#2563eb),black_10%)]">
+                Book a call
+              </BookCallButton>
+            </div>
 
             <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger asChild>
@@ -87,14 +85,16 @@ export function SiteNavbar() {
                       </Link>
                     );
                   })}
-                  <Button
-                    asChild
-                    className="mt-2 bg-[var(--accent-color,#2563eb)] text-white hover:bg-[color-mix(in_oklab,var(--accent-color,#2563eb),black_10%)]"
-                  >
-                    <SmartLink href={BOOK_CALL_URL} onClick={() => setOpen(false)}>
+                  <div className="mt-2">
+                    <BookCallButton
+                      className="w-full bg-[var(--accent-color,#2563eb)] text-white hover:bg-[color-mix(in_oklab,var(--accent-color,#2563eb),black_10%)]"
+                      // close the menu when the dialog opens
+                      // eslint-disable-next-line react/jsx-no-bind
+                      onClick={() => setOpen(false)}
+                    >
                       Book a call
-                    </SmartLink>
-                  </Button>
+                    </BookCallButton>
+                  </div>
                 </div>
               </SheetContent>
             </Sheet>
